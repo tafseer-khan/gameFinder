@@ -1,8 +1,8 @@
-.menu-text{
-    width: 100%;
+#genre-column {
+  padding: 0 auto;
 }
-a{
+
+a {
     background-color: white;
     margin: 10px;
-
 }

@@ -2,74 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameFinder</title>
 
-    <!-- Compressed CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Foundation CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>GameFinder</title>
 
 </head>
 
 <body>
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <ul class="dropdown menu align-center" data-dropdown-menu>
-                <li class="menu-text">Choose your Genre!</li>
-                <ul class="menu">
-                    <li><a class = 'genre' href="#">Action</a></li>
-                    <li><a class = 'genre' href="#">Adventure</a></li>
-                    <li><a class = 'genre' href="#">RPG</a></li>
-                    <li><a class = 'genre' href="#">Strategy</a></li>
-                    <li><a class = 'genre' href="#">Shooter</a></li>
-                    <li><a class = 'genre' href="#">Simulation</a></li>
-                    <li><a class = 'genre' href="#">Platformer</a></li>
-                    <li><a class = 'genre' href="#">Racing</a></li>
-                    <li><a class = 'genre' href="#">Massively Multiplayer</a></li>
-                    <li><a class = 'genre' href="#">Fighting</a></li>
-                  </ul>
-        </div>
+
+  <!-- This demo uses float grid but you can use flex grid too -->
+
+  <div class="row">
+    <div class="columns text-center">
+      <h1>GameFinder</h1>
     </div>
-    
+  </div>
 
-    <script>
-        var genre = "";
-        $('.genre').on('click',function(){
-            var G = Math.floor(Math.random() * 20);
-            var P = Math.floor(Math.random() * 100);
-            genre = ($(this).text()).toLowerCase();
-            console.log(genre)
-            const settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://rawg-video-games-database.p.rapidapi.com/games?genres="+genre+"&page="+P,
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-key": "16f6042a71mshd7819557aed7c23p19670cjsn3b86dc1f29bc",
-                "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
-            }
-        };
-
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            var randomGame = response.results[G];
-            console.log(randomGame);
-            var gameName = randomGame.name;
-            console.log(gameName);
-            
-        });
-
-        })
+  <div class="row">
+    <div class="columns" id="genre-column">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li>
+          <a>Genre</a>
+          <ul class="menu">
+            <li><a class='button genre' href="#">Action</a></li>
+            <li><a class='button genre' href="#">Adventure</a></li>
+            <li><a class='button genre' href="#">RPG</a></li>
+            <li><a class='button genre' href="#">Strategy</a></li>
+            <li><a class='button genre' href="#">Shooter</a></li>
+            <li><a class='button genre' href="#">Simulation</a></li>
+            <li><a class='button genre' href="#">Platformer</a></li>
+            <li><a class='button genre' href="#">Racing</a></li>
+            <li><a class='button genre' href="#">Massively Multiplayer</a></li>
+            <li><a class='button genre' href="#">Fighting</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 
-        
-    </script>
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- Foundation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 
 </body>
 
