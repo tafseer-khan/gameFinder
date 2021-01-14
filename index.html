@@ -19,33 +19,38 @@
 
 <body>
 
-  <div class="row">
-    <div class="columns text-center">
-      <h1>GameFinder</h1>
-    </div>
+  <header>
+
+    <h1 class="text-center" id="title">GameFinder</h1>
+
+    <ul class="dropdown menu align-center" data-dropdown-menu>
+      <li>
+        <a id="dropdown-title">Genre</a>
+        <ul class="menu" id="genre-dropdown">
+          <li><a class='button expanded genre' href="#">Action</a></li>
+          <li><a class='button expanded genre' href="#">Adventure</a></li>
+          <li><a class='button expanded genre' href="#">RPG</a></li>
+          <li><a class='button expanded genre' href="#">Strategy</a></li>
+          <li><a class='button expanded genre' href="#">Shooter</a></li>
+          <li><a class='button expanded genre' href="#">Simulation</a></li>
+          <li><a class='button expanded genre' href="#">Platformer</a></li>
+          <li><a class='button expanded genre' href="#">Racing</a></li>
+          <li><a class='button expanded genre' href="#">Massively Multiplayer</a></li>
+          <li><a class='button expanded genre' href="#">Fighting</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </header> 
+  
+  <div id="game-display">
+
+    <iframe id="embedded-video"></iframe>
+
   </div>
 
-  <div class="row">
-    <div class="columns">
-      <ul class="dropdown menu align-center" data-position="bottom" data-alignment="center" data-dropdown-menu>
-        <li>
-          <a>Genre</a>
-          <ul class="menu" id="genre-dropdown">
-            <li><a class='button expanded genre' href="#">Action</a></li>
-            <li><a class='button expanded genre' href="#">Adventure</a></li>
-            <li><a class='button expanded genre' href="#">RPG</a></li>
-            <li><a class='button expanded genre' href="#">Strategy</a></li>
-            <li><a class='button expanded genre' href="#">Shooter</a></li>
-            <li><a class='button expanded genre' href="#">Simulation</a></li>
-            <li><a class='button expanded genre' href="#">Platformer</a></li>
-            <li><a class='button expanded genre' href="#">Racing</a></li>
-            <li><a class='button expanded genre' href="#">Massively Multiplayer</a></li>
-            <li><a class='button expanded genre' href="#">Fighting</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
+  
+
 
 
 
@@ -55,6 +60,8 @@
 
   <!-- Foundation JS -->
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+
+  <script src="https://raw.githubusercontent.com/davidjbradshaw/iframe-resizer/master/js/iframeResizer.min.js"></script>
 
   <!-- Custom JS -->
   <script src="script.js"></script>

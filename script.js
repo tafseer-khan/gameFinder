@@ -28,9 +28,37 @@ $(document).ready(function() {
     console.log(randomGame);
     var gameName = randomGame.name;
     console.log(gameName);
-      
+      getVideo(gameName);
     });
 
   });
 
 });
+
+function getVideo(gameName) {
+  $.ajax({
+    type: 'GET',
+    url: 'https://www.googleapis.com/youtube/v3/search',
+    data: {
+        key: 'AIzaSyDSyXZxaXvDhXHkf6U7g9jstwgGKO51rrc',
+        q: gameName + " Gameplay",
+        part: 'snippet',
+        maxResults: 1,
+        type: 'video',
+        videoEmbeddable: true,
+    },
+    success: function(data){
+        embedVideo(data)
+    },
+    error: function(response){
+        console.log("Request Failed");
+    }
+  });
+}
+
+function embedVideo(data) {
+$('#embedded-video').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
+// $('h3').text(data.items[0].snippet.title)
+// $('.description').text(data.items[0].snippet.description)
+}
+
