@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <iframe src=""></iframe>
+    <h3>Video Title</h3>
+    <p class="description">Video Description<p>
+    <script>
+            function getVideo() {
+      $.ajax({
+        type: 'GET',
+        url: 'https://www.googleapis.com/youtube/v3/search',
+        data: {
+            key: 'AIzaSyDSyXZxaXvDhXHkf6U7g9jstwgGKO51rrc',
+            q: "world of warcraft",
+            part: 'snippet',
+            maxResults: 1,
+            type: 'video',
+            videoEmbeddable: true,
+        },
+        success: function(data){
+            embedVideo(data)
+        },
+        error: function(response){
+            console.log("Request Failed");
+        }
+      });
+    }
+    function embedVideo(data) {
+    $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
+    $('h3').text(data.items[0].snippet.title)
+    $('.description').text(data.items[0].snippet.description)}
+    getVideo();
+    </script>
+   
+
+</body>
+    
+</html>
+    
