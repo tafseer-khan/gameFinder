@@ -1,5 +1,6 @@
-#genre-column {
-  padding: 0 auto;
+#center {
+  margin: 0 auto;
+  display: inline;
 }
 
 a {
