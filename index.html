@@ -20,38 +20,35 @@
 <body>
     <div class="top-bar">
         <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text genre">Choose your Genre:</li>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-
-
-
-
-            </ul>
+            <ul class="dropdown menu align-center" data-dropdown-menu>
+                <li class="menu-text">Choose your Genre!</li>
+                <ul class="menu">
+                    <li><a class = 'genre' href="#">Action</a></li>
+                    <li><a class = 'genre' href="#">Adventure</a></li>
+                    <li><a class = 'genre' href="#">RPG</a></li>
+                    <li><a class = 'genre' href="#">Strategy</a></li>
+                    <li><a class = 'genre' href="#">Shooter</a></li>
+                    <li><a class = 'genre' href="#">Simulation</a></li>
+                    <li><a class = 'genre' href="#">Platformer</a></li>
+                    <li><a class = 'genre' href="#">Racing</a></li>
+                    <li><a class = 'genre' href="#">Massively Multiplayer</a></li>
+                    <li><a class = 'genre' href="#">Fighting</a></li>
+                  </ul>
         </div>
     </div>
+    
 
     <script>
-        function rollG() { Math.floor(Math.random() * 20) }
-        function rollP() { Math.floor(Math.random() * 100) }
-
-
-
-        const settings = {
+        var genre = "";
+        $('.genre').on('click',function(){
+            var G = Math.floor(Math.random() * 20);
+            var P = Math.floor(Math.random() * 100);
+            genre = ($(this).text()).toLowerCase();
+            console.log(genre)
+            const settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://rawg-video-games-database.p.rapidapi.com/games?genres=adventure&",
+            "url": "https://rawg-video-games-database.p.rapidapi.com/games?genres="+genre+"&page="+P,
             "method": "GET",
             "headers": {
                 "x-rapidapi-key": "16f6042a71mshd7819557aed7c23p19670cjsn3b86dc1f29bc",
@@ -61,7 +58,17 @@
 
         $.ajax(settings).done(function (response) {
             console.log(response);
+            var randomGame = response.results[G];
+            console.log(randomGame);
+            var gameName = randomGame.name;
+            console.log(gameName);
+            
         });
+
+        })
+
+
+        
     </script>
 
 </body>

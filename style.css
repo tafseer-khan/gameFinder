@@ -1,7 +1,8 @@
 .menu-text{
     width: 100%;
-    text-align: center;
 }
-.genre{
-    justify-content: center;
+a{
+    background-color: white;
+    margin: 10px;
+
 }
