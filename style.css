@@ -19,6 +19,13 @@ header {
   left: 47.95px;
 }
 
+.genre {
+  background-color: red;
+}
+.genre:hover {
+  background-color:gray;
+}
+
 #game-display {
   margin: 24px 20%;
 }
@@ -37,7 +44,9 @@ header {
   margin: 24px 0;
 }
 
-
+.game-information-details {
+  margin-bottom: 8px;
+}
 
 @media only screen and (max-width: 1000px) {
   #game-display {
