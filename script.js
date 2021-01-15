@@ -48,13 +48,18 @@ $(document).ready(function() {
     console.log(game_image)
     $('#game-information').empty().append('<h2 id="game_title">TITLE</h2>')
     $('#game_title').text(gameName)
-    $('#game-information').append('<img src=game_image></img>')
-    $('#game-information').append('<p id="esrb_rating">')
-    $('#esrb_rating').text("ESRB: "+esrb)
+    $('#game-information').append('<img id ="game_image"></img>')
+    $('#game_image').attr('src',game_image)
+    if(esrb != 'Not Defined'){
+      $('#game-information').append('<p id="esrb_rating">')
+      $('#esrb_rating').text("ESRB: "+esrb)
+    }
     $('#game-information').append('<p id="platforms_available">')
     $('#platforms_available').text("Platforms Available: "+aPlatforms)
     $('#game-information').append('<p id="metacritic_score">')
-    $('#metacritic_score').text('Metacritic Score: '+metacritic_score)
+    if(score != null){
+      $('#metacritic_score').text('Metacritic Score: '+score)
+    }
       getVideo(gameName)
       });
     
