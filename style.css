@@ -15,10 +15,35 @@ header {
   left: -58.3515px;
 }
 
+#game-display {
+  margin: 24px 30%;
+}
+
 #embedded-video {
-  margin: 24px auto;
   display: block;
-  max-width: 80%;
-  max-height: 80%;
+  width: 40vw;
+  height: 22.5vw;
+}
+
+@media only screen and (max-width: 638px) {
+  #game-display {
+    margin: 24px 20%;
+  }
+  
+  #embedded-video {
+    width: 60vw;
+    height: 33.75vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #game-display {
+    margin: 24px 10%;
+  }
+  
+  #embedded-video {
+    width: 80vw;
+    height: 45vw;
+  }
 }
 
