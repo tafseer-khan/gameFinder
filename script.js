@@ -99,7 +99,9 @@ function getVideo(gameName) {
  
 
 function embedVideo(data) {
-$('#embedded-video').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);}
+  $('#embedded-video').show();
+  $('#embedded-video').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
+}
 // $('h3').text(data.items[0].snippet.title)
 // $('.description').text(data.items[0].snippet.description)
 
