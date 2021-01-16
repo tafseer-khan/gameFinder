@@ -43,7 +43,7 @@
   
   <div id="game-display">
 
-    <h3 id="game-title">Halo 3</h3>
+    <h3 id="game-title"></h3>
 
     <iframe id="embedded-video"></iframe>
 
@@ -51,17 +51,35 @@
 
       <div class="grid-x grid-margin-x">
         <div class="cell small-5">
-          <div class="game-information-details" id="esrb-rating"><b>ESRB Rating: </b><span id="esrb-rating-data">Mature</span></div>
 
-          <div class="game-information-details" id="platforms-available"><b>Platforms Available: </b><span id="platforms-available-data">Playstation 4</span></div>
+          <div class="game-information-details" id="esrb-rating">
+            <b>ESRB Rating: </b><span id="esrb-rating-data"></span>
+          </div>
 
-          <div class="game-information-details" id="metacritic-score"><b>Metacritic Score: </b><span id="metacritic-score-data">95</span></div>
+          <div class="game-information-details" id="platforms-available">
+            <b>Platforms Available: </b><span id="platforms-available-data"></span>
+          </div>
+
+          <div class="game-information-details" id="metacritic-score">
+            <b>Metacritic Score: </b><span id="metacritic-score-data"></span>
+          </div>
+
+          <div class="game-information-details" id="released-date">
+            <b>Release Date: </b><span id="released-date-data"></span>
+          </div>
+
+          <iframe id="soundcloud-playlist" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/mugatunesofficial/sets/audible-adderall-14"></iframe>
+
         </div>
-        <div class="cell auto"><img src="https://store-images.s-microsoft.com/image/apps.58523.13744479854832406.0affa1b0-655f-49af-ab66-9c9ccd71090c.484af366-5355-40a4-b4be-a60afd2c07de" id="game-image"></img></div>
+        <div class="cell auto">
+          <img id="game-image"></img>
+          <img class="secondary-game-image"></img>
+          <img class="secondary-game-image"></img>
+          <img class="secondary-game-image"></img>
+        </div>
+
       </div>
-
     </div>
-
   </div>
 
   <!-- jQuery -->
@@ -70,8 +88,12 @@
   <!-- Foundation JS -->
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 
+  <!-- SoundCloud SDK JS -->
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
+
   <!-- Custom JS -->
-  <script src="script.js"></script>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/script.js"></script>
 
 </body>
 
