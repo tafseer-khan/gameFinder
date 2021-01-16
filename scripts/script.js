@@ -12,8 +12,10 @@ function getGame(genre) {
   };
 
   $.ajax(settings).done(function (response) {
-    let game = response.results[Math.floor(Math.random() * MAX_GAME_NUM)];
+    $('#choose-your-genre').hide();
 
+    let game = response.results[Math.floor(Math.random() * MAX_GAME_NUM)];
+    
     if (game.name != null) {
       $('#game-title').show();
       $('#game-title').text(game.name);

@@ -55,8 +55,14 @@ header {
   font-family: 'Press Start 2P', cursive;
   background: transparent;
 }
+
 .genre:hover {
   opacity: 0.7;
+}
+
+#choose-your-genre {
+  margin: 0 auto;
+  display: block;
 }
 
 #game-display {
