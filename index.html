@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 
@@ -21,23 +24,36 @@
 
   <header>
 
-    <ul class="dropdown menu align-center" data-closing-time="0" data-dropdown-menu>
-      <li>
-        <a id="dropdown-title">GameFinder</a>
-        <ul class="menu" id="genre-dropdown">
-          <li><a class='button expanded genre' href="#">Action</a></li>
-          <li><a class='button expanded genre' href="#">Adventure</a></li>
-          <li><a class='button expanded genre' href="#">RPG</a></li>
-          <li><a class='button expanded genre' href="#">Strategy</a></li>
-          <li><a class='button expanded genre' href="#">Shooter</a></li>
-          <li><a class='button expanded genre' href="#">Simulation</a></li>
-          <li><a class='button expanded genre' href="#">Platformer</a></li>
-          <li><a class='button expanded genre' href="#">Racing</a></li>
-          <li><a class='button expanded genre' href="#">Massively Multiplayer</a></li>
-          <li><a class='button expanded genre' href="#">Fighting</a></li>
-        </ul>
-      </li>
-    </ul>
+    
+
+    <div id="header-menu">
+
+      <img src="right-arrow.gif" id="right-arrow"></img>
+      <img src="left-arrow.gif" id="left-arrow"></img>
+
+      <ul class="dropdown menu" data-closing-time="0" data-dropdown-menu>
+        <li>
+          <a id="dropdown-title">GameFinder</a>
+          <ul class="menu" id="genre-dropdown">
+            <li><a class='button expanded genre' href="#">Action</a></li>
+            <li><a class='button expanded genre' href="#">Adventure</a></li>
+            <li><a class='button expanded genre' href="#">RPG</a></li>
+            <li><a class='button expanded genre' href="#">Strategy</a></li>
+            <li><a class='button expanded genre' href="#">Shooter</a></li>
+            <li><a class='button expanded genre' href="#">Simulation</a></li>
+            <li><a class='button expanded genre' href="#">Platformer</a></li>
+            <li><a class='button expanded genre' href="#">Racing</a></li>
+            <li><a class='button expanded genre' href="#">Massively Multiplayer</a></li>
+            <li><a class='button expanded genre' href="#">Fighting</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+    
+
+    
 
   </header>
   
@@ -45,7 +61,11 @@
 
     <h3 id="game-title"></h3>
 
-    <iframe id="embedded-video"></iframe>
+    <div class="frameholder">
+      <img src="chooseYourGenre.gif" id="startScreen"></img>
+    
+      <iframe id="embedded-video"></iframe>
+    </div>
 
     <div id="game-information">
 

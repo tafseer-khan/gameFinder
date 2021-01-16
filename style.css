@@ -1,32 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
-
 body {
-  font-family: 'Cute Font', cursive;
+  background-image: url(background.jpg);
 }
 
 header {
-  background-color: orange;
   padding: 16px;
+}
+
+#header-menu {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+#right-arrow {
+  position: absolute;
+  left: -290px;
+  top: -78px;
+}
+
+#left-arrow {
+  position: absolute;
+  right: -290px;
+  top: -78px;
 }
 
 #dropdown-title {
   font-size: 3rem;
   padding: 8px;
-  color: white;
+  color: #01FFFF;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
-  right: -10px;
-  top: 35px;
-  border-color: #FFFFFF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  display: none;
 }
 
 #genre-dropdown {
   left: 47.95px;
 }
 
+.is-dropdown-submenu {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+}
+
 .genre {
-  background-color: orange;
+  color: #01FFFF;
+  font-family: 'Press Start 2P', cursive;
+  background: transparent;
 }
 .genre:hover {
   opacity: 0.7;
@@ -40,6 +62,8 @@ header {
 #game-title {
   text-align: center;
   font-weight: bold;
+  color: #01FFFF;
+  font-family: 'Press Start 2P', cursive;
 }
 
 #embedded-video {
@@ -49,6 +73,13 @@ header {
 
 #game-information {
   margin: 24px 0;
+}
+
+.cell {
+  background-color: #E92EFB;
+  font-family: 'Press Start 2P', cursive;
+  color: #01FFFF;
+  padding: 2%;
 }
 
 .game-information-details {
@@ -63,6 +94,11 @@ header {
   margin-top: 8px;
   width: 100%;
   height: 20vw;
+}
+
+#startScreen {
+  z-index: 3;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
