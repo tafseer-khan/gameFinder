@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Press Start 2P Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
@@ -26,8 +27,8 @@
 
     <div id="header-menu">
 
-      <img src="right-arrow.gif" id="right-arrow"></img>
-      <img src="left-arrow.gif" id="left-arrow"></img>
+      <img src="images/right-arrow.gif" id="right-arrow"></img>
+      <img src="images/left-arrow.gif" id="left-arrow"></img>
 
       <ul class="dropdown menu" data-closing-time="0" data-dropdown-menu>
         <li>
@@ -51,47 +52,65 @@
 
   </header>
 
-  <img src="chooseYourGenre.gif" id="choose-your-genre"></img>
+  <div id="moving-images">
+    <img src="images/chooseYourGenre.gif" id="choose-your-genre"></img>
+
+    <img src="images/galaga.gif" id="galaga"></img>
+  </div>
   
-  <div id="game-display">
+  <div class="grid-x" id="large-game-container">
 
-    <h3 id="game-title"></h3>
+    <div class="cell small-2">
+      <div class="game-sidebar"></div>
+    </div>
 
-    <iframe id="embedded-video"></iframe>
+    <div class="cell small-8">
+      <div id="game-display">
 
-    <div id="game-information">
-
-      <div class="grid-x grid-margin-x">
-        <div class="cell small-5">
-
-          <div class="game-information-details" id="esrb-rating">
-            <b>ESRB Rating: </b><span id="esrb-rating-data"></span>
+        <h3 id="game-title"></h3>
+    
+        <iframe id="embedded-video"></iframe>
+    
+        <div id="game-information">
+    
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-5">
+    
+              <div class="game-information-details" id="esrb-rating">
+                <b>ESRB Rating: </b><span id="esrb-rating-data"></span>
+              </div>
+    
+              <div class="game-information-details" id="platforms-available">
+                <b>Platforms Available: </b><span id="platforms-available-data"></span>
+              </div>
+    
+              <div class="game-information-details" id="metacritic-score">
+                <b>Metacritic Score: </b><span id="metacritic-score-data"></span>
+              </div>
+    
+              <div class="game-information-details" id="released-date">
+                <b>Release Date: </b><span id="released-date-data"></span>
+              </div>
+    
+              <iframe id="soundcloud-playlist" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/mugatunesofficial/sets/audible-adderall-14"></iframe>
+    
+            </div>
+            <div class="cell auto">
+              <img id="game-image"></img>
+              <img class="secondary-game-image"></img>
+              <img class="secondary-game-image"></img>
+              <img class="secondary-game-image"></img>
+            </div>
+    
           </div>
-
-          <div class="game-information-details" id="platforms-available">
-            <b>Platforms Available: </b><span id="platforms-available-data"></span>
-          </div>
-
-          <div class="game-information-details" id="metacritic-score">
-            <b>Metacritic Score: </b><span id="metacritic-score-data"></span>
-          </div>
-
-          <div class="game-information-details" id="released-date">
-            <b>Release Date: </b><span id="released-date-data"></span>
-          </div>
-
-          <iframe id="soundcloud-playlist" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/mugatunesofficial/sets/audible-adderall-14"></iframe>
-
         </div>
-        <div class="cell auto">
-          <img id="game-image"></img>
-          <img class="secondary-game-image"></img>
-          <img class="secondary-game-image"></img>
-          <img class="secondary-game-image"></img>
-        </div>
-
       </div>
     </div>
+
+    <div class="cell small-2">
+      <div class="game-sidebar"></div>
+    </div>
+
   </div>
 
   <!-- jQuery -->

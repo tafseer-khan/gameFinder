@@ -1,5 +1,5 @@
 body {
-  background-image: url(background.jpg);
+  background-image: url(images/background.jpg);
 }
 
 header {
@@ -60,14 +60,38 @@ header {
   opacity: 0.7;
 }
 
-#choose-your-genre {
-  margin: 0 auto;
+#moving-images {
+  position: relative;
+  width: fit-content;
+  margin: 16px auto;
   display: block;
 }
 
-#game-display {
+#choose-your-genre {
+  position: absolute;
+  top: 40%;
+}
+
+#galaga {
+  display: block;
+}
+
+#large-game-container {
   display: none;
-  margin: 16px 20%;
+}
+
+.game-sidebar {
+  background-image: url(images/galaga.gif);
+  background-repeat: repeat-y;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#game-display {
+  display: block;
+  margin: 16px auto;
+  width: 100%;
 }
 
 #game-title {
@@ -75,11 +99,12 @@ header {
   font-weight: bold;
   color: #01FFFF;
   font-family: 'Press Start 2P', cursive;
+  text-shadow: 2px 2px 8px #E92EFB;
 }
 
 #embedded-video {
-  width: 60vw;
-  height: 33.75vw;
+  width: 66.66667vw;
+  height: 37.500001875vw;
   border: 4px solid #E92EFB;
 }
 
@@ -120,8 +145,21 @@ header {
 }
 
 @media only screen and (max-width: 1000px) {
+  .cell.small-2 {
+    display: none;
+  }
+
+  .cell.small-8 {
+    width: 100%;
+  }
+
   #game-display {
     margin: 16px 10%;
+    width: 80%;
+    background-image: url(images/galaga.gif);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: 0 200px;
   }
   
   #embedded-video {
@@ -161,6 +199,7 @@ header {
 @media only screen and (max-width: 450px) {
   #game-display {
     margin: 16px 5%;
+    width: 90%;
   }
   
   #embedded-video {

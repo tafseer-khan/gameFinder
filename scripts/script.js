@@ -12,10 +12,10 @@ function getGame(genre) {
   };
 
   $.ajax(settings).done(function (response) {
-    $('#choose-your-genre').hide();
+    $('#moving-images').hide();
 
     let game = response.results[Math.floor(Math.random() * MAX_GAME_NUM)];
-    
+
     if (game.name != null) {
       $('#game-title').show();
       $('#game-title').text(game.name);
@@ -94,13 +94,7 @@ function getGame(genre) {
     else 
       $('#game-image').hide();
 
-    $('#game-display').show();
-
-
-    // Only showing this temporarily because we don't have access to the YouTube API
-    let iFrame = document.getElementById('embedded-video').contentWindow.document.open();
-    iFrame.write('Sorry, we can\'t seem to find a video right now!');
-    iFrame.close();
+    $('#large-game-container').css('display', 'flex');
 
     getPlaylist(genre);
     // getVideo(game.name);
@@ -122,12 +116,11 @@ function getVideo(game) {
     },
     success: function(response) {
       $('#embedded-video').attr('src', 'https://www.youtube.com/embed/' + response.items[0].id.videoId);
+      $('#embedded-video').show();
     },
     error: function(response) {
       console.log("Request failed");
-      let iFrame = document.getElementById('embedded-video').contentWindow.document.open();
-      iFrame.write('Sorry, we can\'t seem to find a video right now!');
-      iFrame.close();
+      $('#embedded-video').hide();
     }
   });
 }
