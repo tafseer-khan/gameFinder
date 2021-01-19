@@ -63,7 +63,7 @@ header {
 #moving-images {
   position: relative;
   width: fit-content;
-  margin: 16px auto;
+  margin: calc(15vh - 2.5rem) auto;
   display: block;
 }
 
