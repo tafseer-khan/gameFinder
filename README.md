@@ -1,7 +1,11 @@
-# gameFinder
+# GameFinder
 
-When the page loads you're given the options of picking from 10 different game genres.
-The game genres are Action, Adventure, RPG, Strategy, Shooter, Simulation, Platformer, Racing, Massively Multiplayer, and Fighting.
-When the game genre is chosen, a random game in the genre and it's details will be displayed.
-Simultaneously a Youtube video of gameplay of that game will be displayed.
-URL: https://danbushong.github.io/gameFinder/
+## Description
+Web page that automatically recommends a game based on the genre you select, complete with a relevant YouTube video, and useful information on the game. Use it [here](https://danbushong.github.io/gameFinder/).
+
+We used the [RAWG Video Game Database API](https://api.rawg.io/docs/) to generate the random game and its information, and the [YouTube API](https://developers.google.com/youtube/v3) to generate a relevant video about the game.
+
+### Co-Creators
+[Cole Ballard](https://github.com/ColeBallard) <br>
+[Tasfeer Khan](https://github.com/tafseer-khan) <br>
+[Dan Bushong](https://github.com/danbushong) <br>
