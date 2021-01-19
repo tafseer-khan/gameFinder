@@ -72,10 +72,6 @@ header {
   top: 40%;
 }
 
-#galaga {
-  display: block;
-}
-
 #large-game-container {
   display: none;
 }
@@ -122,6 +118,12 @@ header {
   margin-bottom: 8px;
   background-color: #E92EFB;
   padding: 8px;
+  /* border-radius: 10px; */
+}
+
+#soundcloud-playlist {
+  width: 100%;
+  height: 170px;
 }
 
 #game-image {
@@ -133,19 +135,12 @@ header {
   margin-top: 8px;
 }
 
-#soundcloud-playlist {
-  border: 2px solid #E92EFB;
-  width: 100%;
-  height: 170px;
-}
-
-#startScreen {
-  z-index: 3;
-  width: 100%;
-}
-
 @media only screen and (max-width: 1000px) {
   .cell.small-2 {
+    display: none;
+  }
+
+  .cell.small-2 .game-sidebar {
     display: none;
   }
 

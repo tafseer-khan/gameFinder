@@ -96,8 +96,8 @@ function getGame(genre) {
 
     $('#large-game-container').css('display', 'flex');
 
-    getPlaylist(genre);
-    // getVideo(game.name);
+    // getPlaylist(genre);
+    getVideo(game.name);
   });
       
 }
