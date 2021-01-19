@@ -96,7 +96,7 @@ function getGame(genre) {
 
     $('#large-game-container').css('display', 'flex');
 
-    // getPlaylist(genre);
+    getPlaylist(genre);
     getVideo(game.name);
   });
       
@@ -126,48 +126,9 @@ function getVideo(game) {
 }
 
 function getPlaylist(genre) {
-  let link;
-  // example
-  link = 'https://soundcloud.com/therealwooyaa/sets/gaming';
-
-  switch (genre) {
-    case 'action':
-
-      break;
-    case 'adventure':
-
-      break;
-    case 'role-playing-games-rpg':
-
-      break;
-    case 'strategy':
-
-      break;
-    case 'shooter':
-
-      break;
-    case 'simulation':
-      
-      break;
-    case 'platformer':
-
-      break;
-    case 'racing':
-
-      break;
-    case 'massively-multiplayer':
-
-      break;
-    case 'fighting':
-
-      break;
-    default:
-      console.log('genre error');
-      break;
-  }
-
-  let widget = SC.Widget(document.getElementById('soundcloud-playlist'));
-  widget.load(link, { auto_play: true });
+  let iFrameElement = document.querySelector('#soundcloud-playlist');
+  let widget = SC.Widget(iFrameElement);
+  widget.load(SOUNDCLOUD_PLAYLISTS[genre], { auto_play: true });
 }
 
 $(document).ready(function() {
