@@ -3,12 +3,9 @@ function getGame(genre) {
   const settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://rawg-video-games-database.p.rapidapi.com/games?genres=" + genre + "&page=" + (Math.floor(Math.random() * MAX_PAGE_NUM) + 1),
+    "url": "https://api.rawg.io/api/games?key="+RAPID_API_KEY+"&genres=" + genre + "&page=" + (Math.floor(Math.random() * MAX_PAGE_NUM) + 1),
     "method": "GET",
-    "headers": {
-      "x-rapidapi-key": RAPID_API_KEY,
-      "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
-    }
+
   };
 
   $.ajax(settings).done(function (response) {
@@ -128,7 +125,7 @@ function getVideo(game) {
 function getPlaylist(genre) {
   let iFrameElement = document.querySelector('#soundcloud-playlist');
   let widget = SC.Widget(iFrameElement);
-  widget.load(SOUNDCLOUD_PLAYLISTS[genre], { auto_play: true });
+  widget.load(SOUNDCLOUD_PLAYLISTS[genre], { auto_play: false });
 }
 
 $(document).ready(function() {

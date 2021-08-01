@@ -1,6 +1,6 @@
 const MAX_GAME_NUM  = 20, MAX_PAGE_NUM = 100;
 
-const RAPID_API_KEY = "16f6042a71mshd7819557aed7c23p19670cjsn3b86dc1f29bc";
+const RAPID_API_KEY = "06555a7d8cb34866bac67f544742b4fa";
 const YT_API_KEY = 'AIzaSyDSyXZxaXvDhXHkf6U7g9jstwgGKO51rrc';
 
 const SOUNDCLOUD_PLAYLISTS = {
